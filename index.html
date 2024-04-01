@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+		.koe{
+			background: orange;
+			height: 300px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+	<div class="koe"></div>
+		<h4 >ГОРОХИ КОТОРЫЕ 
+			ПОМЕРЛЫ <span>5</span></h4>
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px;left: 600px;">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px;left: 590px;">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px;left: 590px">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px;left: 590px">
+		<img class="shooter" src="peashooter.png"  style="top: 650px;left: 590px">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px;left:1500px">
+		<img class="zombies" src="zombie2.png" style="top: 320px;left:1500px">
+		<img class="zombies" src="zombie2.png" style="top: 420px;left:1500px">
+		<img class="zombies" src="zombie4.png" style="top: 520px;left:1500px">
+		<img class="zombies" src="zombie4.png" style="top: 620px;left:1500px">
+	</div>
+<script>
+
+	let myzombies = document.querySelectorAll(".zombies");
+
+	let zomb = 1500
+	let zomb1 = 1500
+	let zomb2 = 1500
+	let zomb3 = 1500
+	let zomb4 = 1500
+
+	let gog = document.querySelectorAll(".shooter");
+
+	myzombies[0].onclick = function (){
+		zomb = zomb - 100
+		myzombies[0].style.left = zomb + "px"
+
+		if(zomb==600){
+		    
+		    gog[0].style.display = "none"
+            alert("горох не помер")
+        }
+    }
+   //2
+    	myzombies[1].onclick = function (){
+		zomb1 = zomb1 - 100
+		myzombies[1].style.left = zomb1 + "px"
+
+		if(zomb1==600){
+		    
+		    gog[1].style.display = "none"
+            alert("горох не помер")
+        }
+    }
+
+    //3
+        myzombies[2].onclick = function (){
+		zomb2 = zomb2 - 100
+		myzombies[2].style.left = zomb2 + "px"
+
+		if(zomb2==600){
+		    
+		    gog[2].style.display = "none"
+            alert("горох не помер")
+        }
+    }
+    //4
+        myzombies[3].onclick = function (){
+		zomb3 = zomb3 - 100
+		myzombies[3].style.left = zomb3 + "px"
+
+		if(zomb3==600){
+		    
+		    gog[3].style.display = "none"
+            alert("горох не помер")
+        }
+    }
+    //5
+        myzombies[4].onclick = function (){
+		zomb4 = zomb4 - 100
+		myzombies[4].style.left = zomb4 + "px"
+
+		if(zomb4==600){
+		    
+		    gog[4].style.display = "none"
+            alert("горох не помер")
+        }
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
